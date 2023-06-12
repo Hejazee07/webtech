@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+
+        </title>
+    </head>
+    <body>
+        <div id="myElement">Touch me!</div>
+        <div id="mouseover">move mouse over find me...</div>
+        <script>
+            window.addEventListener("load",start,false);
+            function start()
+            {
+                document.getElementById("myElement").addEventListener("mouseout",out,false);
+                document.getElementById("myElement").addEventListener("mouseover",move,false);
+            }
+            function out(){
+                document.getElementById("myElement").innerHTML="Click me";
+            }
+            function move(){
+                document.getElementById("mouseover").innerHTML="you have performed mouse over";
+            }
+        </script>
+    </body>
+</html>
